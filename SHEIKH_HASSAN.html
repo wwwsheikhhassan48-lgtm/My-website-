@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SHEIKH_HASSAN - Free SEO tips, digital marketing guidance, and online earning strategies in Urdu/Hindi. Learn SEO without investment.">
+    <meta name="keywords" content="SEO, free SEO, earn money online, digital marketing, SHEIKH_HASSAN, SEO tips Urdu, online earning Pakistan">
+    <title>SHEIKH_HASSAN | Free SEO & Online Earning Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f0f0f;
+            --secondary: #1a1a1a;
+            --accent: #00d4ff;
+            --accent-2: #ff006e;
+            --gold: #ffd700;
+            --text: #ffffff;
+            --text-dim: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .urdu-text {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            line-height: 2;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 0, 110, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+            animation: bgMove 10s ease-in-out infinite;
+        }
+
+        @keyframes bgMove {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-20px, -20px) scale(1.1); }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: rgba(15, 15, 15, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--gold), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--gold), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid var(--accent);
+            border-radius: 50px;
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(0, 212, 255, 0); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--gold), var(--accent-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            margin-bottom: 2rem;
+        }
+
+        .urdu-tagline {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gold);
+            color: var(--primary);
+        }
+
+        /* Free Tools Section */
+        .tools {
+            padding: 4rem 2rem;
+            background: var(--secondary);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-dim);
+            margin-bottom: 3rem;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tool-card {
+            background: var(--primary);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-card::before {
+            content: 'FREE';
+            position: absolute;
+            top: 1rem;
+            right: -2rem;
+            background: var(--accent-2);
+            color: white;
+            padding: 0.25rem 3rem;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .tool-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .tool-card h3 {
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .tool-card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        /* Methods Section */
+        .methods {
+            padding: 4rem 2rem;
+        }
+
+        .methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .method-card {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 0, 110, 0.1));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .method-card:hover {
+            transform: scale(1.05);
+            border-color: var(--gold);
+        }
+
+        .method-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            opacity: 0.5;
+        }
+
+        .method-card h3 {
+            margin: 1rem 0;
+        }
+
+        /* YouTube Section */
+        .youtube {
+            padding: 4rem 2rem;
+            background: var(--secondary);
+            text-align: center;
+        }
+
+        .youtube-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--primary);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+        }
+
+        .youtube-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .youtube-card h3 {
+            color: #ff0000;
+            margin-bottom: 1rem;
+        }
+
+        .subscribe-btn {
+            display: inline-block;
+            background: #ff0000;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+
+        .subscribe-btn:hover {
+            background: #cc0000;
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #25d366;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+        }
+
+        .youtube-social { background: #ff0000; color: white; }
+        .whatsapp-social { background: #25d366; color: white; }
+        .facebook-social { background: #1877f2; color: white; }
+        .instagram-social { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero { padding-top: 5rem; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">SH</div>
+                SHEIKH_HASSAN
+            </div>
+            <ul class="nav-links">
+                <li><a href="#tools">Free Tools</a></li>
+                <li><a href="#methods">Methods</a></li>
+                <li><a href="#youtube">YouTube</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">🚀 100% Free SEO Guidance</div>
+            <h1>Learn <span>SEO</span> & Earn Online</h1>
+            <p class="urdu-tagline">بغیر پیسے لگائے آن لائن پیسے کمانا سیکھیں</p>
+            <p>Start your digital journey with zero investment. Free tools, free tips, and real earning methods.</p>
+            <div class="btn-group">
+                <a href="#tools" class="btn btn-primary">Start Learning Free</a>
+                <a href="https://youtube.com" target="_blank" class="btn btn-secondary">Watch Videos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Tools Section -->
+    <section class="tools" id="tools">
+        <h2 class="section-title">Free SEO Tools</h2>
+        <p class="section-subtitle">Koi paisa nahi, sirf free tools use karein</p>
+
+        <div class="tools-grid">
+            <div class="tool-card fade-in">
+                <div class="tool-icon">🔍</div>
+                <h3>Google Search Console</h3>
+                <p>Apni website ki performance check karein bilkul free. Keywords, clicks, aur errors dekhein.</p>
+            </div>
+            <div class="tool-card fade-in">
+                <div class="tool-icon">📊</div>
+                <h3>Google Analytics</h3>
+                <p>Visitor tracking, behavior analysis, aur traffic sources bilkul muft.</p>
+            </div>
+            <div class="tool-card fade-in">
+                <div class="tool-icon">🔧</div>
+                <h3>Ubersuggest (Free)</h3>
+                <p>Keyword research, SEO audit, aur competitor analysis limited free version mein.</p>
+            </div>
+            <div class="tool-card fade-in">
+                <div class="tool-icon">📝</div>
+                <h3>Answer The Public</h3>
+                <p>Log kya search kar rahe hain dekhein. Content ideas bilkul free.</p>
+            </div>
+            <div class="tool-card fade-in">
+                <div class="tool-icon">🐸</div>
+                <h3>Screaming Frog</h3>
+                <p>Website crawl karke technical errors find karein. Free 500 URLs tak.</p>
+            </div>
+            <div class="tool-card fade-in">
+                <div class="tool-icon">📄</div>
+                <h3>Google Docs/Sheets</h3>
+                <p>Content planning, keyword tracking, aur reporting ke liye best free tools.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Earning Methods -->
+    <section class="methods" id="methods">
+        <h2 class="section-title">3 Steps to Earn</h2>
+        <p class="section-subtitle">Bina investment ke earning shuru karein</p>
+
+        <div class="methods-grid">
+            <div class="method-card fade-in">
+                <div class="method-number">01</div>
+                <h3>Seekho (Learn)</h3>
+                <p>YouTube se free SEO seekhein. SHEIKH_HASSAN ki videos follow karein. Practice karein apni free blog par.</p>
+            </div>
+            <div class="method-card fade-in">
+                <div class="method-number">02</div>
+                <h3>Portfolio Banayein</h3>
+                <p>Blogger.com par free website banaein. Khud ki site rank karein. Screenshots save karein as proof.</p>
+            </div>
+            <div class="method-card fade-in">
+                <div class="method-number">03</div>
+                <h3>Clients Lein</h3>
+                <p>Fiverr par free account banaein. Facebook groups mein services offer karein. Local businesses approach karein.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Section -->
+    <section class="youtube" id="youtube">
+        <h2 class="section-title">YouTube Channel</h2>
+        <p class="section-subtitle">Free video tutorials in Urdu/Hindi</p>
+
+        <div class="youtube-card fade-in">
+            <div class="youtube-icon">📺</div>
+            <h3>SHEIKH_HASSAN - SEO Tips</h3>
+            <p>Subscribe karein aur har roz naye tips paayein. Complete SEO course bilkul free!</p>
+            <a href="https://youtube.com/@sheikh_hassan" target="_blank" class="subscribe-btn">Subscribe Now</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Questions?</h2>
+        <p class="section-subtitle">Direct WhatsApp par message karein</p>
+
+        <a href="https://wa.me/923001234567" class="whatsapp-btn" target="_blank">
+            💬 WhatsApp Karein
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="#" class="youtube-social" title="YouTube">▶</a>
+            <a href="#" class="whatsapp-social" title="WhatsApp">💬</a>
+            <a href="#" class="facebook-social" title="Facebook">f</a>
+            <a href="#" class="instagram-social" title="Instagram">📷</a>
+        </div>
+        <p>&copy; 2026 SHEIKH_HASSAN. All rights reserved.</p>
+        <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 0.5rem;">Free SEO Education for Everyone</p>
+    </footer>
+
+    <script>
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
